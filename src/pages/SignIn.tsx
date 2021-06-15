@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/pages/Login.css';
 import logo from '../logo.svg';
 
-function Login() {
+function SignIn() {
   return (
     <div className="Container">
       <div className="Box">
@@ -18,4 +18,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignIn;
