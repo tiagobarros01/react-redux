@@ -1,9 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { applyMiddleware, createStore, Middleware, Reducer } from 'redux';
-import { AuthAction } from './modules/auth/types';
+import { AuthAction, AuthState } from './modules/auth/types';
 
 export interface StoreState {
-  auth: AuthAction;
+  auth: AuthState;
 }
 
 export type StoreAction = AuthAction;
