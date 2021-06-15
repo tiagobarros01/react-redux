@@ -9,10 +9,6 @@
   transition: all 50ms;
 }
 
-body {
-  overflow: hidden;
-}
-
 body,
 button {
   font-family: sans-serif;
