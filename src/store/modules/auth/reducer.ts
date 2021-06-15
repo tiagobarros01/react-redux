@@ -5,7 +5,7 @@ const initialState: AuthState = {
   isSignedIn: false,
 };
 
-export const auth = (state = initialState, action: AuthAction): AuthState => {
+const auth = (state = initialState, action: AuthAction): AuthState => {
   switch (action.type) {
     case '@auth/SIGN_IN_REQUEST':
       return {
@@ -17,3 +17,5 @@ export const auth = (state = initialState, action: AuthAction): AuthState => {
       return state;
   }
 };
+
+export default auth;
