@@ -1,15 +1,23 @@
 import { action } from 'typesafe-actions';
 
-interface Props {
+interface RequestProps {
   email: string;
   password: string;
 }
 
-export const signinRequest = ({ email, password }: Props) =>
+interface SuccessProps {
+  token: string;
+}
+
+export const signInRequest = ({ email, password }: RequestProps) =>
   action('@auth/SIGN_IN_REQUEST', {
-    type: '@auth/SIGN_IN_REQUEST',
-    payload: {
-      email,
-      password,
-    },
+    email,
+    password,
   });
+
+export const signInSuccess = ({ token }: SuccessProps) =>
+  action('@auth/SIGN_IN_SUCCESS', {
+    token,
+  });
+
+export const signInFailure = () => action('@auth/SIGN_IN_FAILURE');
